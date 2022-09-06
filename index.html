@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Raul" />
+    <meta name="description" content="Calculator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/all.css" />
+    <script src="scripts/main.js"></script>
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <div id="calculator">
+      <table>
+        <tr class="row-display">
+          <td class="td-display" colspan="4">
+            <p type="button" id="display">0</p>
+          </td>
+        </tr>
+        <tr class="row-one">
+          <td class="clear">
+            <button class="clear" type="reset" onclick="clearDisplay()">
+              C
+            </button>
+          </td>
+          <td >
+            <button class="btn-symbols button changeSign" type="button" value="" onclick="negativeNumber()">+/-</button>
+          </td>
+          <td >
+            <button class="btn-symbols button" id="divide" type="button" value="/" onclick="operator(this.value),setHighlighted(this.value)">/</button>
+          </td>
+        </tr>
+        <tr class="row-two">
+          <td >
+            <button class="btn-numbers button" type="button" value="7" onclick="addNumber(this.value)">7</button>
+          </td>
+          <td >
+            <button class="btn-numbers button" type="button" value="8" onclick="addNumber(this.value)">8</button>
+          </td>
+          <td >
+            <button class="btn-numbers button" type="button" value="9" onclick="addNumber(this.value)">9</button>
+          </td>
+          <td >
+            <button class="btn-symbols button" id="multiply" type="button" value="*" onclick="operator(this.value),setHighlighted(this.value)">*</button>
+          </td>
+        </tr>
+        <tr class="row-three">
+          <td >
+            <button class="btn-numbers button" type="button" value="4" onclick="addNumber(this.value)">4</button>
+          </td>
+          <td >
+            <button class="btn-numbers button" type="button" value="5" onclick="addNumber(this.value)">5</button>
+          </td>
+          <td >
+            <button class="btn-numbers button" type="button" value="6" onclick="addNumber(this.value)">6</button>
+          </td>
+          <td >
+            <button class="btn-symbols button" id="substract" type="button" value="-" onclick="operator(this.value),setHighlighted(this.value)">-</button>
+          </td>
+        </tr>
+        <tr class="row-four">
+          <td >
+            <button class="btn-numbers button" type="button" value="1" onclick="addNumber(this.value)">1</button>
+          </td>
+          <td >
+            <button class="btn-numbers button" type="button" value="2" onclick="addNumber(this.value)">2</button>
+          </td>
+          <td >
+            <button class="btn-numbers button" type="button" value="3" onclick="addNumber(this.value)">3</button>
+          </td>
+          <td >
+            <button class="btn-symbols button" id="sum" type="button" value="+" onclick="operator(this.value),setHighlighted(this.value)">+</button>
+          </td>
+        </tr>
+        <tr class="row-five">
+          <td class="td-zero">
+            <button type="button" value="0" class="button btn-numbers" id="btn-zero" onclick="addNumber(this.value)">0</button>
+          </td>
+          <td >
+            <button class="btn-numbers button comma" id="comma" type="button" value="." onclick="addNumber(this.value)">,</button>
+          </td>
+          <td >
+            <button class="btn-symbols button" type="button" onclick="equals()">=</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
